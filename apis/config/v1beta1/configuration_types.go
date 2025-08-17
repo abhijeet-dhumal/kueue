@@ -360,6 +360,8 @@ type Integrations struct {
 	//  - "kubeflow.org/pytorchjob"
 	//  - "kubeflow.org/tfjob"
 	//  - "kubeflow.org/xgboostjob"
+	//  - "kubeflow.org/jaxjob"
+	//  - "trainer.kubeflow.org/trainjob"
 	//  - "workload.codeflare.dev/appwrapper"
 	//  - "pod"
 	//  - "deployment" (requires enabling pod integration)

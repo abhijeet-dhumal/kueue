@@ -9,14 +9,15 @@ require (
 	github.com/google/go-cmp v0.7.0
 	github.com/json-iterator/go v1.1.12
 	github.com/kubeflow/mpi-operator v0.6.0
-	github.com/kubeflow/training-operator v1.9.0
-	github.com/onsi/ginkgo/v2 v2.23.0
-	github.com/onsi/gomega v1.36.2
-	github.com/open-policy-agent/cert-controller v0.12.0
-	github.com/project-codeflare/appwrapper v1.1.0
-	github.com/prometheus/client_golang v1.21.1
-	github.com/prometheus/client_model v0.6.1
-	github.com/ray-project/kuberay/ray-operator v1.3.1
+	github.com/kubeflow/trainer/v2 v2.0.0
+	github.com/kubeflow/training-operator v1.9.3
+	github.com/onsi/ginkgo/v2 v2.23.4
+	github.com/onsi/gomega v1.38.0
+	github.com/open-policy-agent/cert-controller v0.13.0
+	github.com/project-codeflare/appwrapper v1.1.2
+	github.com/prometheus/client_golang v1.23.0
+	github.com/prometheus/client_model v0.6.2
+	github.com/ray-project/kuberay/ray-operator v1.4.2
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/pflag v1.0.6
 	go.uber.org/zap v1.27.0
