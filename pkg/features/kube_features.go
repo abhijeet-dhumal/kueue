@@ -235,9 +235,11 @@ var defaultVersionedFeatureGates = map[featuregate.Feature]featuregate.Versioned
 		{Version: version.MustParse("0.9"), Default: true, PreRelease: featuregate.Beta},
 	},
 	AdmissionCheckValidationRules: {
+		{Version: version.MustParse("0.8"), Default: false, PreRelease: featuregate.Alpha},
 		{Version: version.MustParse("0.9"), Default: false, PreRelease: featuregate.Deprecated},
 	},
 	KeepQuotaForProvReqRetry: {
+		{Version: version.MustParse("0.8"), Default: false, PreRelease: featuregate.Alpha},
 		{Version: version.MustParse("0.9"), Default: false, PreRelease: featuregate.Deprecated},
 	},
 	ManagedJobsNamespaceSelector: {
@@ -250,12 +252,15 @@ var defaultVersionedFeatureGates = map[featuregate.Feature]featuregate.Versioned
 		{Version: version.MustParse("0.10"), Default: false, PreRelease: featuregate.Alpha},
 	},
 	TASProfileMostFreeCapacity: {
+		{Version: version.MustParse("0.10"), Default: false, PreRelease: featuregate.Alpha},
 		{Version: version.MustParse("0.11"), Default: false, PreRelease: featuregate.Deprecated},
 	},
 	TASProfileLeastFreeCapacity: {
+		{Version: version.MustParse("0.10"), Default: false, PreRelease: featuregate.Alpha},
 		{Version: version.MustParse("0.11"), Default: false, PreRelease: featuregate.Deprecated},
 	},
 	TASProfileMixed: {
+		{Version: version.MustParse("0.10"), Default: false, PreRelease: featuregate.Alpha},
 		{Version: version.MustParse("0.11"), Default: false, PreRelease: featuregate.Deprecated},
 	},
 	HierarchicalCohorts: {
