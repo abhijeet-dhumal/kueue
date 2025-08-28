@@ -1,10 +1,9 @@
-ARG GOLANG_IMAGE=registry-proxy.engineering.redhat.com/rh-osbs/openshift-golang-builder:v1.23
-# Start of Go versioning workaround for lack of go-toolset for version 1.23
-FROM ${GOLANG_IMAGE} AS golang
+# Use a more recent Go version that meets the requirements
+FROM golang:1.24-alpine AS golang
 
 FROM registry.access.redhat.com/ubi9/ubi:latest AS builder
 
-ARG GOLANG_VERSION=1.23.0
+ARG GOLANG_VERSION=1.24.0
 
 # Install system dependencies
 RUN dnf upgrade -y && dnf install -y \
@@ -16,8 +15,8 @@ RUN dnf upgrade -y && dnf install -y \
 # Install Go
 ENV PATH=/usr/local/go/bin:$PATH
 
-ARG GOLANG_DIR=/usr/lib/golang
-COPY --from=golang ${GOLANG_DIR} /usr/local/go
+# Copy Go from the golang alpine image
+COPY --from=golang /usr/local/go /usr/local/go
 
 WORKDIR /workspace
 
